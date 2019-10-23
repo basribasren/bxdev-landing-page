@@ -1,0 +1,25 @@
+#sponsors {
+    background: url(../img/background/countdown.jpg) no-repeat center;
+    background-attachment: scroll;
+    background-size: auto auto;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+#sponsors .section-title-header .section-title {
+    color: #fff;
+}
+
+#sponsors .section-title-header p {
+    color: #fff;
+}
+
+#sponsors .sponsors-logo a img {
+    margin: 30px;
+}
+
+#sponsors .spnsors-logo:hover {
+    border-color: transparent;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+}

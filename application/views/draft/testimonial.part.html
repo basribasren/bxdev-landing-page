@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>EventUp - Event and Conference Template</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/bootstrap.min.css">
+    <!-- Icon -->
+    <link rel="stylesheet" type="text/css" href="../assets/fonts/line-icons.css">
+    <!-- Nivo Lightbox -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/nivo-lightbox.css">
+    <!-- Animate -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/animate.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.css">
+    <!-- Responsive Style -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/responsive.css">
+    <!-- Plus -->
+    <link rel="stylesheet" type="text/css" href="../assets/css/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/main.carousel.css">
+    <link rel="stylesheet" type="text/css" href="../assets/css/slick.css">
+    <link rel="stylesheet" href="../assets/css/swiper.min.css">
+    <style type="text/css" media="screen">
+    /* ==========================================================================
+   Video Section Style
+   ========================================================================== */
+    .ready-to-play {
+        height: 560px;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        z-index: 2;
+    }
+
+    .ready-to-play:before {
+        content: '';
+        background-image: linear-gradient(0deg, #FF4D79 0, #FF809F 100%);
+        position: absolute;
+        display: block;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        opacity: 0.7;
+    }
+
+    video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        background-size: cover;
+        transition: 1s opacity;
+    }
+
+    .stop {
+        opacity: 1;
+    }
+
+    .stopfade .ready-to-play:before {
+        opacity: 1;
+    }
+
+    .video-text {
+        background-size: cover;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 999;
+        color: #fff;
+    }
+
+    .video-text {
+        text-align: center;
+    }
+
+    .video-text h4 {
+        margin-bottom: 15px;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+    .video-text h1 {
+        margin-bottom: 25px;
+        color: #fff;
+    }
+
+    .video-text p {
+        color: #fff;
+    }
+
+    .tb-t {
+        display: table;
+        height: 100%;
+        margin: auto;
+    }
+
+    .tb-t .tb-c {
+        display: table-cell;
+        vertical-align: middle;
+    }
+
+    .tb-t .tb-c button {
+        background: transparent;
+        border: 2px solid #fff;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+    }
+
+    .tb-t .tb-c button i {
+        font-size: 30px;
+        color: #fff;
+        line-height: 70px;
+    }
+
+    .tb-t .tb-c button:focus {
+        outline: none;
+    }
+
+    #information-bar {
+        background: #fff;
+        position: relative;
+    }
+
+    #information-bar .inforation-wrapper {
+        background: #fff;
+        border-radius: 4px;
+        box-shadow: 0 8px 24px #E2E8ED;
+        margin-bottom: -35px;
+        margin-top: -35px;
+        padding: 45px 0;
+        position: relative;
+        top: -40px;
+        z-index: 999;
+    }
+
+    #information-bar ul {
+        text-align: center;
+    }
+
+    #information-bar ul li {
+        display: inline-block;
+    }
+
+    #information-bar ul li i {
+        text-align: center;
+        padding: 0 12px;
+        font-size: 32px;
+        vertical-align: middle;
+        background-image: linear-gradient(0deg, #FF4D79 0, #FF809F 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    #information-bar ul li span {
+        font-size: 13px;
+        display: inline-block;
+        text-align: left;
+        vertical-align: middle;
+    }
+
+    #information-bar ul li span b {
+        font-size: 20px;
+        color: #374045;
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: block;
+    }
+
+    #testimonial .section-title-header .section-title {
+        color: #fff;
+    }
+
+    #testimonial .section-title-header p {
+        color: #fff;
+    }
+
+    .single-testimonial {
+        /*border: 1px solid #cbced1;*/
+        /*padding: 25px 30px;*/
+        /*border-radius: 8px;*/
+        background-color: #fff;
+    }
+
+    .single-testimonial .testimonial-author .author-image img {
+        width: 80px;
+        border-radius: 50%;
+    }
+
+    .single-testimonial .testimonial-author .author-name {
+        padding-left: 20px;
+    }
+
+    .single-testimonial .testimonial-author .author-name .name {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 24px;
+        color: #121212;
+    }
+
+    .single-testimonial .testimonial-author .author-name .sub-title {
+        font-size: 14px;
+        line-height: 24px;
+        color: #a4a4a4;
+    }
+
+    .single-testimonial .testimonial-text {
+        margin-top: 25px;
+    }
+
+    .single-testimonial .testimonial-text .text {
+        font-size: 14px;
+        line-height: 24px;
+        color: #121212;
+        font-style: italic;
+        /*text-align: center;*/
+    }
+
+    .testimonial-active .slick-dots {
+        text-align: center;
+        margin-top: 25px;
+    }
+
+    .testimonial-active .slick-dots li {
+        display: inline-block;
+        margin: 0 3px;
+    }
+
+    .testimonial-active .slick-dots li button {
+        font-size: 0;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: #cbced1;
+        border: 0;
+        cursor: pointer;
+    }
+
+    .testimonial-active .slick-dots li.slick-active button {
+        background-color: #FF4D79;
+    }
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- Video Section Start -->
+    <div id="testimonial" class="ready-to-play section-padding">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-title-header text-center">
+                    <h2 class="section-title wow fadeInUp" data-wow-delay="0.2s">Testimonial Clients</h2>
+                    <p class="wow fadeInDown" data-wow-delay="0.2s">Lorem ipsum dolor sit amet, in quodsi vulputate pro. Ius illum vocent mediocritatem an <br> cule dicta iriure at phaedrum.</p>
+                </div>
+            </div>
+        </div>
+        <video id="bgvid" class="stop" loop>
+            <source src="../assets/video/event.webm" type="video/mp4">
+        </video>
+        <div id="polina" class="video-text">
+            <div class="tb-t">
+                <div class="tb-c">
+                    <div class="polina"><button><i class='lni-play'></i></button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Video Section End -->
+    <!-- Information Bar Start -->
+    <section id="information-bar">
+        <div class="container">
+            <div class="row inforation-wrapper">
+                <div class="col-12">
+                    <div class="row testimonial-active">
+                        <div class="col-lg-3 col-md-6 col-xs-12">
+                            <div class="single-testimonial">
+                                <div class="testimonial-author d-sm-flex align-items-center">
+                                    <div class="author-image">
+                                        <img src="../assets/img/author/author-1.jpg" alt="Author">
+                                    </div>
+                                    <div class="author-name media-body">
+                                        <h6 class="name">Riley Beata</h6>
+                                        <span class="sub-title">Angel Investor</span>
+                                    </div>
+                                </div>
+                                <div class="testimonial-text">
+                                    <p class="text">Poorly designed presentations are a thing of the past. Create beautiful and high-quality content that is aligned with your brand, in just a few clicks.</p>
+                                </div>
+                            </div>
+                            <!-- single testimonial -->
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-xs-12">
+                            <div class="single-testimonial">
+                                <div class="testimonial-author d-sm-flex align-items-center">
+                                    <div class="author-image">
+                                        <img src="../assets/img/author/author-2.jpg" alt="Author">
+                                    </div>
+                                    <div class="author-name media-body">
+                                        <h6 class="name">Fajar Siddiq</h6>
+                                        <span class="sub-title">Entrepreneur and Influencer</span>
+                                    </div>
+                                </div>
+                                <div class="testimonial-text">
+                                    <p class="text">Poorly designed presentations are a thing of the past. Create beautiful and high-quality content that is aligned with your brand, in just a few clicks.</p>
+                                </div>
+                            </div>
+                            <!-- single testimonial -->
+                        </div>
+                        <div class="col-lg-3 col-md-6 col-xs-12">
+                            <div class="single-testimonial">
+                                <div class="testimonial-author d-sm-flex align-items-center">
+                                    <div class="author-image">
+                                        <img src="../assets/img/author/author-2.jpg" alt="Author">
+                                    </div>
+                                    <div class="author-name media-body">
+                                        <h6 class="name">Fajar Siddiq</h6>
+                                        <span class="sub-title">Entrepreneur and Influencer</span>
+                                    </div>
+                                </div>
+                                <div class="testimonial-text">
+                                    <p class="text">Poorly designed presentations are a thing of the past. Create beautiful and high-quality content that is aligned with your brand, in just a few clicks.</p>
+                                </div>
+                            </div>
+                            <!-- single testimonial -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Information Bar End -->
+    <!-- Go to Top Link -->
+    <a href="#" class="back-to-top">
+        <i class="lni-chevron-up"></i>
+    </a>
+    <div id="preloader">
+        <div class="sk-circle">
+            <div class="sk-circle1 sk-child"></div>
+            <div class="sk-circle2 sk-child"></div>
+            <div class="sk-circle3 sk-child"></div>
+            <div class="sk-circle4 sk-child"></div>
+            <div class="sk-circle5 sk-child"></div>
+            <div class="sk-circle6 sk-child"></div>
+            <div class="sk-circle7 sk-child"></div>
+            <div class="sk-circle8 sk-child"></div>
+            <div class="sk-circle9 sk-child"></div>
+            <div class="sk-circle10 sk-child"></div>
+            <div class="sk-circle11 sk-child"></div>
+            <div class="sk-circle12 sk-child"></div>
+        </div>
+    </div>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../assets/js/jquery-min.js"></script>
+    <script src="../assets/js/popper.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/jquery.countdown.min.js"></script>
+    <script src="../assets/js/waypoints.min.js"></script>
+    <script src="../assets/js/jquery.counterup.min.js"></script>
+    <script src="../assets/js/jquery.nav.js"></script>
+    <script src="../assets/js/jquery.easing.min.js"></script>
+    <script src="../assets/js/wow.js"></script>
+    <script src="../assets/js/nivo-lightbox.js"></script>
+    <script src="../assets/js/video.js"></script>
+    <script src="../assets/js/slick.min.js"></script>
+    <script src="../assets/js/swiper.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+</body>
+
+</html>

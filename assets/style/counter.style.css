@@ -1,0 +1,60 @@
+.counter-section {
+    background: url(../img/background/countdown.jpg) no-repeat center;
+    background-size: auto auto;
+    padding: 80px 0;
+    background-size: cover;
+    background-attachment: relative;
+    position: relative;
+}
+
+.counter-section:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.counter-section .counter {
+    position: relative;
+    background: rgba(255, 255, 255, 0.3);
+    padding: 35px 0;
+    border-radius: 4px;
+    padding-left: 45px;
+    margin-left: 20px;
+}
+
+.counter-section .counter .icon {
+    background-image: linear-gradient(0deg, #FF4D79 0, #FF809F 100%);
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    position: absolute;
+    top: 47%;
+    left: -30px;
+    margin-top: -25px;
+}
+
+.counter-section .counter .icon i {
+    font-size: 24px;
+    line-height: 60px;
+    color: #fff;
+}
+
+.counter-section .counter p {
+    font-size: 15px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.counter-section .counter .counterUp {
+    color: #fff;
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
